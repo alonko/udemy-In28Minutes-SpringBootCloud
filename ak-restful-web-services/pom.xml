@@ -8,7 +8,7 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ak.28minutes.rest.webservices</groupId>
+	<groupId>com.ak.minutes.rest.webservices</groupId>
 	<artifactId>ak-restful-web-services</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ak-restful-web-services</name>
@@ -21,10 +21,40 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+<!--		Add support for xml-->
+<!--		<dependency>-->
+<!--			<groupId>com.fasterxml.jackson.dataformat</groupId>-->
+<!--			<artifactId>jackson-dataformat-xml</artifactId>-->
+<!--		</dependency>-->
+
+<!--Add support for returning links in the response-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-hateoas</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.9</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

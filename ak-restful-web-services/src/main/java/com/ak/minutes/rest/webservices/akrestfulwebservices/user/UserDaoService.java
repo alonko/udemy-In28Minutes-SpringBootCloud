@@ -37,4 +37,10 @@ public class UserDaoService {
 
         return null;
     }
+
+    public User deleteUser(int id) {
+        User userToRemove = findUser(id);
+        users.remove(userToRemove);
+        return userToRemove;
+    }
 }

@@ -34,7 +34,6 @@ public class FilteringController {
         return mapping;
     }
 
-
     @GetMapping("/dynamic-filtering-list")
     public MappingJacksonValue retrieveSomeBeansListDynamically() {
         List<SomeBean> someBeans = Arrays.asList(new SomeBean("value11", "value12", "value13", "value14", "value15", "value16"), new SomeBean("value21", "value22", "value23", "value24", "value25", "value26"));

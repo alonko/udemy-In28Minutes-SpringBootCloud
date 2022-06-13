@@ -37,6 +37,12 @@
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
+<!--		Disabling the security to make it easier to work with-->
+<!--		<dependency>-->
+<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-starter-security</artifactId>-->
+<!--		</dependency>-->
+
 <!--		Add support for xml-->
 <!--		<dependency>-->
 <!--			<groupId>com.fasterxml.jackson.dataformat</groupId>-->

@@ -1,30 +1,37 @@
 package com.ak.minutes.rest.webservices.akrestfulwebservices.posts;
 
+import com.ak.minutes.rest.webservices.akrestfulwebservices.user.User;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import javax.persistence.*;
+
+@Entity
 public class Post {
-    private Integer postId;
-    private Integer userId;
+    @Id
+    @GeneratedValue
+    private Integer id;
+
     private String description;
 
-    public Post(Integer postId, Integer userId, String description) {
-        this.postId = postId;
-        this.userId = userId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JsonIgnore
+    private User user;
+
+    public Post() {
+    }
+
+    public Post(Integer id, String description, User userId) {
+        this.id = id;
         this.description = description;
+        this.user = userId;
     }
 
-    public Integer getPostId() {
-        return postId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setPostId(Integer postId) {
-        this.postId = postId;
-    }
-
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getDescription() {
@@ -35,11 +42,18 @@ public class Post {
         this.description = description;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Post{" +
-                "postId=" + postId +
-                ", userId=" + userId +
+                "id=" + id +
                 ", description='" + description + '\'' +
                 '}';
     }
